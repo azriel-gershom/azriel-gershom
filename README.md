@@ -152,9 +152,9 @@
     <div class="sec-title">connect</div>
     <div class="connect-row">
       <a class="connect-btn" href="https://github.com/azriel-gershom">⬡ GitHub</a>
-      <span class="connect-btn">◈ LinkedIn</span>
-      <span class="connect-btn">✉ Email</span>
-      <span class="connect-btn">⚡ Portfolio</span>
+      <a class="connect-btn" href="https://linkedin.com/in/azrielgershom">◈ LinkedIn</a>
+      <a class="connect-btn" href="mailto:azrielgershom@gmail.com">✉ Email</a>
+      <a class="connect-btn" href="https://azriel-portfolio.vercel.app">⚡ Portfolio</a>
     </div>
   </div>
 </div>
