@@ -1,160 +1,264 @@
+<!-- ==================== HEADER ==================== -->
+<div align="center">
 
-<style>
-  :root { --c1: #00ff9f; --c2: #00cfff; --c3: #7b2fff; --dim: #0a0a0a; }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: transparent; }
-  .wrap { font-family: var(--font-mono, monospace); color: #c9d1d9; background: #0d1117; border-radius: 12px; overflow: hidden; padding: 0 0 2rem; border: 1px solid #30363d; }
-  .banner { background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%); border-bottom: 1px solid #21262d; padding: 2.5rem 2rem 2rem; position: relative; overflow: hidden; }
-  .banner::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(0,255,159,0.03) 28px, rgba(0,255,159,0.03) 29px), repeating-linear-gradient(90deg, transparent, transparent 28px, rgba(0,255,159,0.03) 28px, rgba(0,255,159,0.03) 29px); }
-  .typing-row { display: flex; align-items: center; gap: 8px; margin-bottom: 1.2rem; }
-  .prompt { color: var(--c1); font-size: 13px; }
-  .typing { color: #fff; font-size: 22px; font-weight: 500; letter-spacing: 1px; }
-  .cursor { display: inline-block; width: 2px; height: 22px; background: var(--c1); animation: blink 1s step-end infinite; vertical-align: middle; margin-left: 2px; }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-  .subtitle { color: #8b949e; font-size: 13px; margin-bottom: 1.5rem; font-family: var(--font-sans); }
-  .subtitle span { color: var(--c2); }
-  .stat-row { display: flex; gap: 10px; flex-wrap: wrap; }
-  .badge { font-size: 11px; padding: 3px 10px; border-radius: 20px; border: 1px solid; font-family: var(--font-mono); letter-spacing: 0.5px; }
-  .badge-green { border-color: rgba(0,255,159,0.4); color: var(--c1); background: rgba(0,255,159,0.07); }
-  .badge-blue { border-color: rgba(0,207,255,0.4); color: var(--c2); background: rgba(0,207,255,0.07); }
-  .badge-purple { border-color: rgba(123,47,255,0.4); color: #a78bfa; background: rgba(123,47,255,0.07); }
-  .section { padding: 1.5rem 2rem 0; }
-  .sec-title { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #484f58; margin-bottom: 1rem; font-family: var(--font-mono); display: flex; align-items: center; gap: 8px; }
-  .sec-title::after { content: ''; flex: 1; height: 1px; background: #21262d; }
-  .about-box { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem 1.25rem; font-size: 13px; line-height: 1.8; color: #8b949e; font-family: var(--font-sans); }
-  .about-box strong { color: var(--c1); font-weight: 500; }
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
-  .skill-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 0.7rem 1rem; font-size: 12px; display: flex; flex-direction: column; gap: 4px; transition: border-color 0.2s; }
-  .skill-card:hover { border-color: #30363d; }
-  .skill-icon { font-size: 16px; }
-  .skill-name { color: #e6edf3; font-weight: 500; }
-  .skill-sub { color: #484f58; font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; }
-  .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-  .stat-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem; text-align: center; }
-  .stat-num { font-size: 22px; font-weight: 500; font-family: var(--font-mono); }
-  .stat-num.green { color: var(--c1); }
-  .stat-num.blue { color: var(--c2); }
-  .stat-num.purple { color: #a78bfa; }
-  .stat-label { font-size: 10px; color: #484f58; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
-  .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .proj-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 1rem; cursor: pointer; transition: border-color 0.2s; }
-  .proj-card:hover { border-color: rgba(0,255,159,0.3); }
-  .proj-title { color: var(--c2); font-size: 13px; font-weight: 500; margin-bottom: 4px; }
-  .proj-desc { color: #8b949e; font-size: 11px; line-height: 1.5; }
-  .proj-tags { display: flex; gap: 5px; margin-top: 8px; flex-wrap: wrap; }
-  .proj-tag { font-size: 10px; color: #484f58; border: 1px solid #21262d; border-radius: 4px; padding: 1px 6px; }
-  .quote-box { background: #161b22; border-left: 3px solid var(--c3); border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; font-size: 13px; color: #8b949e; font-style: italic; font-family: var(--font-sans); line-height: 1.7; }
-  .quote-box span { color: #a78bfa; }
-  .connect-row { display: flex; gap: 8px; flex-wrap: wrap; }
-  .connect-btn { font-size: 12px; padding: 6px 14px; border-radius: 6px; border: 1px solid #30363d; color: #8b949e; background: #161b22; cursor: pointer; font-family: var(--font-mono); transition: all 0.2s; text-decoration: none; display: inline-block; }
-  .connect-btn:hover { border-color: rgba(0,255,159,0.5); color: var(--c1); }
-  .scanner { position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(90deg, transparent, rgba(0,255,159,0.04), transparent); animation: scan 4s linear infinite; }
-  @keyframes scan { to { left: 150%; } }
-  .avatar-area { display: flex; align-items: flex-start; gap: 1.5rem; position: relative; z-index: 1; }
-  .avatar { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, #1a1a2e, #16213e); border: 2px solid rgba(0,255,159,0.3); display: flex; align-items: center; justify-content: center; font-size: 28px; flex-shrink: 0; position: relative; }
-  .avatar::after { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 1px solid rgba(0,255,159,0.15); animation: pulse-ring 2s ease-out infinite; }
-  @keyframes pulse-ring { 0%{transform:scale(1);opacity:0.5} 100%{transform:scale(1.2);opacity:0} }
-  .avatar-info { flex: 1; }
-  .username { font-size: 11px; color: #484f58; margin-bottom: 4px; font-family: var(--font-mono); }
-</style>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ff9f,50:00cfff,100:7b2fff&height=200&section=header&text=AZRIEL%20GERSHOM%20RAJ&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=AI%20%26%20ML%20Engineer%20%7C%20Full%20Stack%20Dev%20%7C%20Cyberpunk%20Coder&descAlignY=58&descSize=16&animation=twinkling" />
 
-<div class="wrap">
-  <div class="banner">
-    <div class="scanner"></div>
-    <div class="avatar-area">
-      <div class="avatar">⚡</div>
-      <div class="avatar-info">
-        <div class="username">// github.com/azriel-gershom</div>
-        <div class="typing-row">
-          <span class="prompt">~/</span>
-          <span class="typing">Azriel Gershom Raj</span>
-          <span class="cursor"></span>
-        </div>
-        <div class="subtitle">
-          <span>AI &amp; ML Engineer</span> · Cyberpunk Coder · Builder of the Future
-        </div>
-        <div class="stat-row">
-          <span class="badge badge-green">⬡ AI &amp; Machine Learning</span>
-          <span class="badge badge-blue">⬡ Full Stack Dev</span>
-          <span class="badge badge-purple">⬡ Cybersecurity</span>
-          <span class="badge badge-green">⬡ IoT Systems</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="sec-title">whoami</div>
-    <div class="about-box">
-      <strong>&gt; Azriel Gershom Raj</strong> — CSE (AI &amp; ML) student at <strong>Karunya Institute of Technology &amp; Sciences</strong>.<br><br>
-      I don't just write code. I <strong>architect intelligence</strong>. From training neural nets at 2am to deploying full-stack apps before breakfast — I operate at the intersection of creativity and raw technical precision.<br><br>
-      Armed with <strong>Python · Java · JavaScript</strong> and an obsession with making machines think, I'm building systems that matter.
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="sec-title">tech arsenal</div>
-    <div class="skills-grid">
-      <div class="skill-card"><span class="skill-icon">🧠</span><span class="skill-name">AI / ML</span><span class="skill-sub">Core Domain</span></div>
-      <div class="skill-card"><span class="skill-icon">🐍</span><span class="skill-name">Python</span><span class="skill-sub">Primary Lang</span></div>
-      <div class="skill-card"><span class="skill-icon">☕</span><span class="skill-name">Java</span><span class="skill-sub">OOP & Systems</span></div>
-      <div class="skill-card"><span class="skill-icon">🌐</span><span class="skill-name">JavaScript</span><span class="skill-sub">Full Stack</span></div>
-      <div class="skill-card"><span class="skill-icon">📡</span><span class="skill-name">IoT</span><span class="skill-sub">Systems Dev</span></div>
-      <div class="skill-card"><span class="skill-icon">🔐</span><span class="skill-name">CyberSec</span><span class="skill-sub">Fundamentals</span></div>
-      <div class="skill-card"><span class="skill-icon">🔀</span><span class="skill-name">Git / GitHub</span><span class="skill-sub">Version Control</span></div>
-      <div class="skill-card"><span class="skill-icon">⚙️</span><span class="skill-name">Full Stack</span><span class="skill-sub">Web Dev</span></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="sec-title">github stats</div>
-    <div class="stats-row">
-      <div class="stat-card"><div class="stat-num green">∞</div><div class="stat-label">Lines Shipped</div></div>
-      <div class="stat-card"><div class="stat-num blue">24/7</div><div class="stat-label">Online Status</div></div>
-      <div class="stat-card"><div class="stat-num purple">100%</div><div class="stat-label">Commitment</div></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="sec-title">featured projects</div>
-    <div class="project-grid">
-      <div class="proj-card">
-        <div class="proj-title">◈ AI Core</div>
-        <div class="proj-desc">Machine learning pipeline with real-world impact. Models trained, deployed, dominating.</div>
-        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">TensorFlow</span><span class="proj-tag">ML</span></div>
-      </div>
-      <div class="proj-card">
-        <div class="proj-title">◈ IoT Nexus</div>
-        <div class="proj-desc">Connected devices talking to each other. Smart systems for a smarter world.</div>
-        <div class="proj-tags"><span class="proj-tag">IoT</span><span class="proj-tag">Python</span><span class="proj-tag">Hardware</span></div>
-      </div>
-      <div class="proj-card">
-        <div class="proj-title">◈ Cyber Fortress</div>
-        <div class="proj-desc">Security tools and explorations in the dark art of protecting digital systems.</div>
-        <div class="proj-tags"><span class="proj-tag">Security</span><span class="proj-tag">Python</span><span class="proj-tag">Linux</span></div>
-      </div>
-      <div class="proj-card">
-        <div class="proj-title">◈ Web Forge</div>
-        <div class="proj-desc">Full-stack applications with clean UX. Because great tech deserves great design.</div>
-        <div class="proj-tags"><span class="proj-tag">JavaScript</span><span class="proj-tag">React</span><span class="proj-tag">Node</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="sec-title">the philosophy</div>
-    <div class="quote-box">
-      <span>"</span>In a world drowning in data, the ones who survive are not those who have the most — but those who understand the most. I build the intelligence that separates signal from noise.<span>"</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="sec-title">connect</div>
-    <div class="connect-row">
-      <a class="connect-btn" href="https://github.com/azriel-gershom">⬡ GitHub</a>
-      <a class="connect-btn" href="https://linkedin.com/in/azrielgershom">◈ LinkedIn</a>
-      <a class="connect-btn" href="mailto:azrielgershom@gmail.com">✉ Email</a>
-      <a class="connect-btn" href="https://azriel-portfolio.vercel.app">⚡ Portfolio</a>
-    </div>
-  </div>
 </div>
+
+<!-- ==================== TYPING ANIMATION ==================== -->
+<div align="center">
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=00FF9F&center=true&vCenter=true&width=700&lines=🧠+AI+%26+ML+Engineer+%40+Karunya+Institute;⚡+Full+Stack+Web+Developer;📡+IoT+Systems+Builder;🔐+Cybersecurity+Explorer;🐍+Python+%7C+☕+Java+%7C+🌐+JavaScript;💡+Turning+Ideas+into+Intelligent+Systems)](https://git.io/typing-svg)
+
+</div>
+
+<!-- ==================== PROFILE VIEWS + BADGES ==================== -->
+<div align="center">
+
+![Profile Views](https://komarev.com/ghpvc/?username=azriel-gershom&style=flat-square&color=00ff9f&label=PROFILE+VIEWS)
+![GitHub followers](https://img.shields.io/github/followers/azriel-gershom?style=flat-square&color=00cfff&labelColor=0d1117&label=FOLLOWERS)
+![GitHub stars](https://img.shields.io/github/stars/azriel-gershom?style=flat-square&color=a78bfa&labelColor=0d1117&label=TOTAL+STARS)
+
+</div>
+
+<br/>
+
+---
+
+<!-- ==================== WHOAMI SECTION ==================== -->
+
+## `⚡ whoami`
+
+```python
+#!/usr/bin/env python3
+# ─────────────────────────────────────────────────────────────
+#  AZRIEL GERSHOM RAJ  |  AI & ML Engineer  |  v2026.04
+# ─────────────────────────────────────────────────────────────
+
+class AzrielGershomRaj:
+
+    def __init__(self):
+        self.name        = "Azriel Gershom Raj"
+        self.alias       = "azriel-gershom"
+        self.university  = "Karunya Institute of Technology & Sciences"
+        self.degree      = "B.Tech — CSE (Artificial Intelligence & Machine Learning)"
+        self.location    = "India 🇮🇳"
+        self.role        = "AI Engineer · Full Stack Dev · Cyberpunk Coder"
+
+    @property
+    def domains(self):
+        return [
+            "🧠  Artificial Intelligence & Machine Learning",
+            "📡  IoT System Development",
+            "🔐  Cybersecurity Fundamentals",
+            "🌐  Full Stack Web Development",
+        ]
+
+    @property
+    def tech_stack(self):
+        return {
+            "languages"  : ["Python", "Java", "JavaScript"],
+            "ai_ml"      : ["TensorFlow", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
+            "web"        : ["React", "Node.js", "HTML5", "CSS3", "REST APIs"],
+            "tools"      : ["Git", "GitHub", "Linux", "VS Code", "Jupyter"],
+            "security"   : ["Ethical Hacking Basics", "Network Fundamentals", "Bash Scripting"],
+            "iot"        : ["Raspberry Pi", "Arduino", "MQTT", "Sensor Integration"],
+        }
+
+    @property
+    def currently(self):
+        return {
+            "learning"   : "Deep Learning architectures & LLM fine-tuning",
+            "building"   : "AI-powered systems that solve real problems",
+            "exploring"  : "The intersection of IoT, AI, and Security",
+        }
+
+    def motto(self):
+        return "Don't just write code. Architect the future. ⚡"
+
+
+me = AzrielGershomRaj()
+print(me.motto())
+# OUTPUT → Don't just write code. Architect the future. ⚡
+```
+
+---
+
+<!-- ==================== TECH ARSENAL ==================== -->
+
+## `🛠 tech.arsenal`
+
+<div align="center">
+
+### ── Languages ──
+![Python](https://img.shields.io/badge/Python-0d1117?style=for-the-badge&logo=python&logoColor=00ff9f)
+![Java](https://img.shields.io/badge/Java-0d1117?style=for-the-badge&logo=openjdk&logoColor=00cfff)
+![JavaScript](https://img.shields.io/badge/JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor=a78bfa)
+![Bash](https://img.shields.io/badge/Bash-0d1117?style=for-the-badge&logo=gnubash&logoColor=00ff9f)
+
+### ── AI & Machine Learning ──
+![TensorFlow](https://img.shields.io/badge/TensorFlow-0d1117?style=for-the-badge&logo=tensorflow&logoColor=00ff9f)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-0d1117?style=for-the-badge&logo=scikitlearn&logoColor=00cfff)
+![NumPy](https://img.shields.io/badge/NumPy-0d1117?style=for-the-badge&logo=numpy&logoColor=a78bfa)
+![Pandas](https://img.shields.io/badge/Pandas-0d1117?style=for-the-badge&logo=pandas&logoColor=00ff9f)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-0d1117?style=for-the-badge&logo=python&logoColor=00cfff)
+![Jupyter](https://img.shields.io/badge/Jupyter-0d1117?style=for-the-badge&logo=jupyter&logoColor=a78bfa)
+
+### ── Full Stack Web ──
+![React](https://img.shields.io/badge/React-0d1117?style=for-the-badge&logo=react&logoColor=00ff9f)
+![Node.js](https://img.shields.io/badge/Node.js-0d1117?style=for-the-badge&logo=node.js&logoColor=00cfff)
+![HTML5](https://img.shields.io/badge/HTML5-0d1117?style=for-the-badge&logo=html5&logoColor=a78bfa)
+![CSS3](https://img.shields.io/badge/CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=00ff9f)
+![MongoDB](https://img.shields.io/badge/MongoDB-0d1117?style=for-the-badge&logo=mongodb&logoColor=00cfff)
+
+### ── Tools & Platforms ──
+![Git](https://img.shields.io/badge/Git-0d1117?style=for-the-badge&logo=git&logoColor=00ff9f)
+![GitHub](https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=00cfff)
+![Linux](https://img.shields.io/badge/Linux-0d1117?style=for-the-badge&logo=linux&logoColor=a78bfa)
+![VS Code](https://img.shields.io/badge/VS%20Code-0d1117?style=for-the-badge&logo=visualstudiocode&logoColor=00ff9f)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-0d1117?style=for-the-badge&logo=raspberrypi&logoColor=00cfff)
+
+</div>
+
+---
+
+<!-- ==================== GITHUB STATS ==================== -->
+
+## `📊 github.stats`
+
+<div align="center">
+
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=azriel-gershom&show_icons=true&theme=chartreuse-dark&bg_color=0d1117&border_color=00ff9f&title_color=00ff9f&icon_color=00cfff&text_color=c9d1d9&ring_color=a78bfa&hide_border=false&count_private=true" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=azriel-gershom&layout=compact&theme=chartreuse-dark&bg_color=0d1117&border_color=00ff9f&title_color=00ff9f&text_color=c9d1d9&hide_border=false" />
+
+</div>
+
+<div align="center">
+
+<img width="70%" src="https://github-readme-streak-stats.herokuapp.com/?user=azriel-gershom&theme=dark&background=0d1117&border=00ff9f&ring=00cfff&fire=a78bfa&currStreakLabel=00ff9f&sideLabels=c9d1d9&dates=8b949e&stroke=00ff9f" />
+
+</div>
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=azriel-gershom&bg_color=0d1117&color=00ff9f&line=00cfff&point=a78bfa&area=true&area_color=00ff9f&hide_border=false&border_color=00ff9f" />
+
+</div>
+
+---
+
+<!-- ==================== FEATURED PROJECTS ==================== -->
+
+## `🚀 featured.projects`
+
+<div align="center">
+
+[![AI Core](https://github-readme-stats.vercel.app/api/pin/?username=azriel-gershom&repo=YOUR-AI-REPO&bg_color=0d1117&border_color=00ff9f&title_color=00ff9f&text_color=c9d1d9&icon_color=00cfff)](https://github.com/azriel-gershom)
+[![IoT Nexus](https://github-readme-stats.vercel.app/api/pin/?username=azriel-gershom&repo=YOUR-IOT-REPO&bg_color=0d1117&border_color=a78bfa&title_color=a78bfa&text_color=c9d1d9&icon_color=00cfff)](https://github.com/azriel-gershom)
+
+</div>
+
+> 📌 *Replace `YOUR-AI-REPO` and `YOUR-IOT-REPO` above with your actual repository names.*
+
+### Project Overview
+
+| 🔬 Project | 📋 Description | 🛠 Stack | ⭐ Status |
+|-----------|---------------|---------|----------|
+| 🧠 **AI Core** | ML pipeline for real-world classification & prediction problems | `Python` `TensorFlow` `Scikit-learn` | Active |
+| 📡 **IoT Nexus** | Smart connected system with sensor data collection & automation | `Python` `MQTT` `Raspberry Pi` | Active |
+| 🔐 **Cyber Fortress** | Security tools, CTF scripts & vulnerability analysis | `Python` `Bash` `Linux` | Building |
+| 🌐 **Web Forge** | Full-stack web application with clean UX and smart backend | `React` `Node.js` `MongoDB` | Active |
+
+---
+
+<!-- ==================== GITHUB CONTRIBUTION SNAKE ==================== -->
+
+## `🐍 contribution.graph`
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/azriel-gershom/azriel-gershom/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/azriel-gershom/azriel-gershom/output/github-contribution-grid-snake.svg" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/azriel-gershom/azriel-gershom/output/github-contribution-grid-snake-dark.svg" />
+</picture>
+
+> ⚙️ *To activate this snake animation, add the GitHub Action below to your repo.*
+
+</div>
+
+---
+
+<!-- ==================== WHAT I'M DOING NOW ==================== -->
+
+## `🌐 current.status`
+
+```bash
+$ cat /proc/azriel/status
+
+[PROCESS]  Building AI models that solve real-world problems
+[LEARNING] Deep Learning · LLM Fine-tuning · Transformer Architectures
+[EXPLORING] Edge AI + IoT · Adversarial ML · Zero-day Security Research
+[OPEN TO]  Internships · Collabs · Open Source Contributions · Research
+[STATUS]   ONLINE — Always building. Never stopping. ⚡
+```
+
+---
+
+<!-- ==================== THE PHILOSOPHY ==================== -->
+
+## `💬 the.philosophy`
+
+<div align="center">
+
+> *"In a world drowning in data, the ones who survive are not those who have the most —*
+> *but those who **understand** the most.*
+> *I build the intelligence that separates signal from noise."*
+>
+> — **Azriel Gershom Raj**
+
+</div>
+
+<div align="center">
+
+```
+╔══════════════════════════════════════════════════════════════╗
+║  "Code is not just syntax. It is a weapon, a brush,         ║
+║   and a prayer — all at once."                              ║
+║                                    — azriel-gershom         ║
+╚══════════════════════════════════════════════════════════════╝
+```
+
+</div>
+
+---
+
+<!-- ==================== CONNECT ==================== -->
+
+## `📡 connect.with.me`
+
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=00ff9f&labelColor=0d1117)](https://github.com/azriel-gershom)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=00cfff&labelColor=0d1117)](https://linkedin.com/in/azrielgershom)
+[![Email](https://img.shields.io/badge/Gmail-0d1117?style=for-the-badge&logo=gmail&logoColor=a78bfa&labelColor=0d1117)](mailto:azrielgershom@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-0d1117?style=for-the-badge&logo=vercel&logoColor=00ff9f&labelColor=0d1117)](https://azriel-portfolio.vercel.app)
+
+</div>
+
+---
+
+<!-- ==================== FOOTER ==================== -->
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7b2fff,50:00cfff,100:00ff9f&height=120&section=footer&text=Thanks%20for%20visiting%20%E2%9A%A1&fontSize=18&fontColor=ffffff&fontAlignY=65&animation=twinkling" />
+
+</div>
+
+<div align="center">
+<sub><code>// EOF — Built with 🧠 by Azriel Gershom Raj · Last updated: 2026</code></sub>
+</div>
+```
+
+---
