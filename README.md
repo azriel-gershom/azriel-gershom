@@ -1,18 +1,18 @@
-<!-- ==================== HEADER ==================== -->
+<!-- HEADER WAVE BANNER -->
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ff9f,50:00cfff,100:7b2fff&height=200&section=header&text=AZRIEL%20GERSHOM%20RAJ&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=AI%20%26%20ML%20Engineer%20%7C%20Full%20Stack%20Dev%20%7C%20Cyberpunk%20Coder&descAlignY=58&descSize=16&animation=twinkling" />
 
 </div>
 
-<!-- ==================== TYPING ANIMATION ==================== -->
+<!-- TYPING ANIMATION -->
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=00FF9F&center=true&vCenter=true&width=700&lines=🧠+AI+%26+ML+Engineer+%40+Karunya+Institute;⚡+Full+Stack+Web+Developer;📡+IoT+Systems+Builder;🔐+Cybersecurity+Explorer;🐍+Python+%7C+☕+Java+%7C+🌐+JavaScript;💡+Turning+Ideas+into+Intelligent+Systems)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=00FF9F&center=true&vCenter=true&width=700&lines=AI+%26+ML+Engineer+%40+Karunya+Institute;Full+Stack+Web+Developer;IoT+Systems+Builder;Cybersecurity+Explorer;Python+%7C+Java+%7C+JavaScript;Turning+Ideas+into+Intelligent+Systems)](https://git.io/typing-svg)
 
 </div>
 
-<!-- ==================== PROFILE VIEWS + BADGES ==================== -->
+<!-- PROFILE BADGES -->
 <div align="center">
 
 ![Profile Views](https://komarev.com/ghpvc/?username=azriel-gershom&style=flat-square&color=00ff9f&label=PROFILE+VIEWS)
@@ -24,8 +24,6 @@
 <br/>
 
 ---
-
-<!-- ==================== WHOAMI SECTION ==================== -->
 
 ## `⚡ whoami`
 
@@ -42,16 +40,16 @@ class AzrielGershomRaj:
         self.alias       = "azriel-gershom"
         self.university  = "Karunya Institute of Technology & Sciences"
         self.degree      = "B.Tech — CSE (Artificial Intelligence & Machine Learning)"
-        self.location    = "India 🇮🇳"
+        self.location    = "India"
         self.role        = "AI Engineer · Full Stack Dev · Cyberpunk Coder"
 
     @property
     def domains(self):
         return [
-            "🧠  Artificial Intelligence & Machine Learning",
-            "📡  IoT System Development",
-            "🔐  Cybersecurity Fundamentals",
-            "🌐  Full Stack Web Development",
+            "Artificial Intelligence & Machine Learning",
+            "IoT System Development",
+            "Cybersecurity Fundamentals",
+            "Full Stack Web Development",
         ]
 
     @property
@@ -74,29 +72,29 @@ class AzrielGershomRaj:
         }
 
     def motto(self):
-        return "Don't just write code. Architect the future. ⚡"
+        return "Don't just write code. Architect the future."
 
 
 me = AzrielGershomRaj()
 print(me.motto())
-# OUTPUT → Don't just write code. Architect the future. ⚡
+# OUTPUT -> Don't just write code. Architect the future.
 ```
 
 ---
-
-<!-- ==================== TECH ARSENAL ==================== -->
 
 ## `🛠 tech.arsenal`
 
 <div align="center">
 
-### ── Languages ──
+### Languages
+
 ![Python](https://img.shields.io/badge/Python-0d1117?style=for-the-badge&logo=python&logoColor=00ff9f)
 ![Java](https://img.shields.io/badge/Java-0d1117?style=for-the-badge&logo=openjdk&logoColor=00cfff)
 ![JavaScript](https://img.shields.io/badge/JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor=a78bfa)
 ![Bash](https://img.shields.io/badge/Bash-0d1117?style=for-the-badge&logo=gnubash&logoColor=00ff9f)
 
-### ── AI & Machine Learning ──
+### AI & Machine Learning
+
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-0d1117?style=for-the-badge&logo=tensorflow&logoColor=00ff9f)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-0d1117?style=for-the-badge&logo=scikitlearn&logoColor=00cfff)
 ![NumPy](https://img.shields.io/badge/NumPy-0d1117?style=for-the-badge&logo=numpy&logoColor=a78bfa)
@@ -104,14 +102,16 @@ print(me.motto())
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-0d1117?style=for-the-badge&logo=python&logoColor=00cfff)
 ![Jupyter](https://img.shields.io/badge/Jupyter-0d1117?style=for-the-badge&logo=jupyter&logoColor=a78bfa)
 
-### ── Full Stack Web ──
+### Full Stack Web
+
 ![React](https://img.shields.io/badge/React-0d1117?style=for-the-badge&logo=react&logoColor=00ff9f)
 ![Node.js](https://img.shields.io/badge/Node.js-0d1117?style=for-the-badge&logo=node.js&logoColor=00cfff)
 ![HTML5](https://img.shields.io/badge/HTML5-0d1117?style=for-the-badge&logo=html5&logoColor=a78bfa)
 ![CSS3](https://img.shields.io/badge/CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=00ff9f)
 ![MongoDB](https://img.shields.io/badge/MongoDB-0d1117?style=for-the-badge&logo=mongodb&logoColor=00cfff)
 
-### ── Tools & Platforms ──
+### Tools & Platforms
+
 ![Git](https://img.shields.io/badge/Git-0d1117?style=for-the-badge&logo=git&logoColor=00ff9f)
 ![GitHub](https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=00cfff)
 ![Linux](https://img.shields.io/badge/Linux-0d1117?style=for-the-badge&logo=linux&logoColor=a78bfa)
@@ -121,8 +121,6 @@ print(me.motto())
 </div>
 
 ---
-
-<!-- ==================== GITHUB STATS ==================== -->
 
 ## `📊 github.stats`
 
@@ -147,65 +145,53 @@ print(me.motto())
 
 ---
 
-<!-- ==================== FEATURED PROJECTS ==================== -->
-
 ## `🚀 featured.projects`
 
 <div align="center">
 
-[![AI Core](https://github-readme-stats.vercel.app/api/pin/?username=azriel-gershom&repo=YOUR-AI-REPO&bg_color=0d1117&border_color=00ff9f&title_color=00ff9f&text_color=c9d1d9&icon_color=00cfff)](https://github.com/azriel-gershom)
-[![IoT Nexus](https://github-readme-stats.vercel.app/api/pin/?username=azriel-gershom&repo=YOUR-IOT-REPO&bg_color=0d1117&border_color=a78bfa&title_color=a78bfa&text_color=c9d1d9&icon_color=00cfff)](https://github.com/azriel-gershom)
+[![AI Core](https://github-readme-stats.vercel.app/api/pin/?username=azriel-gershom&repo=YOUR-AI-REPO-NAME&bg_color=0d1117&border_color=00ff9f&title_color=00ff9f&text_color=c9d1d9&icon_color=00cfff)](https://github.com/azriel-gershom)
+[![IoT Nexus](https://github-readme-stats.vercel.app/api/pin/?username=azriel-gershom&repo=YOUR-IOT-REPO-NAME&bg_color=0d1117&border_color=a78bfa&title_color=a78bfa&text_color=c9d1d9&icon_color=00cfff)](https://github.com/azriel-gershom)
 
 </div>
 
-> 📌 *Replace `YOUR-AI-REPO` and `YOUR-IOT-REPO` above with your actual repository names.*
+> Replace `YOUR-AI-REPO-NAME` and `YOUR-IOT-REPO-NAME` with your real repository names.
 
-### Project Overview
-
-| 🔬 Project | 📋 Description | 🛠 Stack | ⭐ Status |
-|-----------|---------------|---------|----------|
-| 🧠 **AI Core** | ML pipeline for real-world classification & prediction problems | `Python` `TensorFlow` `Scikit-learn` | Active |
-| 📡 **IoT Nexus** | Smart connected system with sensor data collection & automation | `Python` `MQTT` `Raspberry Pi` | Active |
-| 🔐 **Cyber Fortress** | Security tools, CTF scripts & vulnerability analysis | `Python` `Bash` `Linux` | Building |
-| 🌐 **Web Forge** | Full-stack web application with clean UX and smart backend | `React` `Node.js` `MongoDB` | Active |
+| Project | Description | Stack | Status |
+|---------|-------------|-------|--------|
+| **AI Core** | ML pipeline for real-world classification & prediction | `Python` `TensorFlow` `Scikit-learn` | Active |
+| **IoT Nexus** | Smart connected system with sensor data & automation | `Python` `MQTT` `Raspberry Pi` | Active |
+| **Cyber Fortress** | Security tools, CTF scripts & vulnerability analysis | `Python` `Bash` `Linux` | Building |
+| **Web Forge** | Full-stack app with clean UX and smart backend | `React` `Node.js` `MongoDB` | Active |
 
 ---
 
-<!-- ==================== GITHUB CONTRIBUTION SNAKE ==================== -->
-
-## `🐍 contribution.graph`
+## `🐍 contribution.snake`
 
 <div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/azriel-gershom/azriel-gershom/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/azriel-gershom/azriel-gershom/output/github-contribution-grid-snake.svg" />
-  <img alt="github-snake" src="https://raw.githubusercontent.com/azriel-gershom/azriel-gershom/output/github-contribution-grid-snake-dark.svg" />
+  <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/azriel-gershom/azriel-gershom/output/github-contribution-grid-snake-dark.svg" />
 </picture>
-
-> ⚙️ *To activate this snake animation, add the GitHub Action below to your repo.*
 
 </div>
 
 ---
-
-<!-- ==================== WHAT I'M DOING NOW ==================== -->
 
 ## `🌐 current.status`
 
 ```bash
 $ cat /proc/azriel/status
 
-[PROCESS]  Building AI models that solve real-world problems
-[LEARNING] Deep Learning · LLM Fine-tuning · Transformer Architectures
+[PROCESS]   Building AI models that solve real-world problems
+[LEARNING]  Deep Learning · LLM Fine-tuning · Transformer Architectures
 [EXPLORING] Edge AI + IoT · Adversarial ML · Zero-day Security Research
-[OPEN TO]  Internships · Collabs · Open Source Contributions · Research
-[STATUS]   ONLINE — Always building. Never stopping. ⚡
+[OPEN TO]   Internships · Collabs · Open Source Contributions · Research
+[STATUS]    ONLINE — Always building. Never stopping.
 ```
 
 ---
-
-<!-- ==================== THE PHILOSOPHY ==================== -->
 
 ## `💬 the.philosophy`
 
@@ -219,21 +205,15 @@ $ cat /proc/azriel/status
 
 </div>
 
-<div align="center">
-
 ```
-╔══════════════════════════════════════════════════════════════╗
-║  "Code is not just syntax. It is a weapon, a brush,         ║
-║   and a prayer — all at once."                              ║
-║                                    — azriel-gershom         ║
-╚══════════════════════════════════════════════════════════════╝
++--------------------------------------------------------------+
+|  "Code is not just syntax. It is a weapon, a brush,         |
+|   and a prayer — all at once."                              |
+|                                    — azriel-gershom         |
++--------------------------------------------------------------+
 ```
-
-</div>
 
 ---
-
-<!-- ==================== CONNECT ==================== -->
 
 ## `📡 connect.with.me`
 
@@ -241,24 +221,20 @@ $ cat /proc/azriel/status
 
 [![GitHub](https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=00ff9f&labelColor=0d1117)](https://github.com/azriel-gershom)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=00cfff&labelColor=0d1117)](https://linkedin.com/in/azrielgershom)
-[![Email](https://img.shields.io/badge/Gmail-0d1117?style=for-the-badge&logo=gmail&logoColor=a78bfa&labelColor=0d1117)](mailto:azrielgershom@gmail.com)
+[![Gmail](https://img.shields.io/badge/Gmail-0d1117?style=for-the-badge&logo=gmail&logoColor=a78bfa&labelColor=0d1117)](mailto:azrielgershom@gmail.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-0d1117?style=for-the-badge&logo=vercel&logoColor=00ff9f&labelColor=0d1117)](https://azriel-portfolio.vercel.app)
 
 </div>
 
 ---
 
-<!-- ==================== FOOTER ==================== -->
-
+<!-- FOOTER WAVE BANNER -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7b2fff,50:00cfff,100:00ff9f&height=120&section=footer&text=Thanks%20for%20visiting%20%E2%9A%A1&fontSize=18&fontColor=ffffff&fontAlignY=65&animation=twinkling" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7b2fff,50:00cfff,100:00ff9f&height=120&section=footer&text=Thanks%20for%20visiting!&fontSize=18&fontColor=ffffff&fontAlignY=65&animation=twinkling" />
 
 </div>
 
 <div align="center">
-<sub><code>// EOF — Built with 🧠 by Azriel Gershom Raj · Last updated: 2026</code></sub>
+  <sub><code>// EOF — Built with brain by Azriel Gershom Raj · 2026</code></sub>
 </div>
-```
-
----
